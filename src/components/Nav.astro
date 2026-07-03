@@ -1,0 +1,53 @@
+---
+import "../styles/global.css";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+---
+
+<div
+    class="sticky top-0 flex h-[5rem] w-full items-center justify-around bg-[#19332d] md:justify-between md:px-[15%]"
+    transition:persist
+>
+    <a href="/" aria-label="Home">
+        <Image
+            class="h-full min-w-[75px] object-cover transition-all duration-250 hover:scale-[1.1]"
+            src="/Studio_Logo.png"
+            alt="Studio GrimmTango Logo"
+            width={75}
+            height={50}
+            loading="eager"
+        />
+    </a>
+
+    <div class="flex items-center gap-6">
+        <a class="nav-link" href="/games" aria-label="Games">Games</a>
+
+        <a class="nav-link" href="/about" aria-label="About">About</a>
+
+        <a class="nav-link" href="https://x.com/CeloanJ31260" aria-label="Twitter/X" target="_blank">
+            <Icon name="simple-icons:x" />
+        </a>
+
+        <a
+            class="nav-link"
+            href="https://bsky.app/profile/ceolansjourney.bsky.social"
+            aria-label="Bluesky"
+            target="_blank"
+        >
+            <Icon name="simple-icons:bluesky" />
+        </a>
+
+        <a
+            class="nav-link"
+            href="https://linkedin.com/in/studio-grimmtango-107a3640b"
+            aria-label="LinkedIn"
+            target="_blank"
+        >
+            <Icon name="simple-icons:linkedin" />
+        </a>
+
+        <a class="nav-link" href="https://linktr.ee/CeolansJourney" aria-label="LinkTree" target="_blank">
+            <Icon name="simple-icons:linktree" />
+        </a>
+    </div>
+</div>

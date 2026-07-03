@@ -1,0 +1,27 @@
+---
+import "../styles/global.css";
+import { Image } from "astro:assets";
+
+interface Props {
+    bg: ImageMetadata;
+    title: string;
+    content: string;
+    bgalt: string;
+}
+
+const { bg, title, content, bgalt } = Astro.props;
+---
+
+<div class="flex flex-col gap-8 md:flex-row">
+    <Image
+        class="rounded-xl transition-all duration-250 hover:scale-[1.01] md:w-[66%]"
+        src={bg}
+        alt={bgalt}
+        loading="eager"
+        decoding="sync"
+    />
+    <div class="flex flex-col md:w-[33%]">
+        <h1>{title}</h1>
+        {content}
+    </div>
+</div>

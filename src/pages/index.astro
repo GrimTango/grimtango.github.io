@@ -1,11 +1,27 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import CJImage from "../assets/Ceolans_Journey.png";
+import Button from "../components/Button.astro";
 ---
 
 <Layout>
-	<Welcome />
+    <div class="content">
+        <Card
+            bg={CJImage}
+            bgalt="Ceolan's Journey Background"
+            title="Ceolan's Journey"
+            content={(
+                <div class="flex flex-col gap-8">
+                    <p>
+                        Become a young druid tasked with restoring harmony in Ceolan's Journey, the 1st from studio
+                        GrimmTango! This Celtic-inspired side-scrolling fantasy platformer combines traditional
+                        platforming mechanics with innovative music mechanics.
+                    </p>
+                    <p>Coming Soon</p>
+                </div>
+            )}
+        />
+    </div>
 </Layout>

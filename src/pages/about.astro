@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import TeamCard from "../components/TeamCard.astro";
+---
+
+<Layout title="About">
+    <div class="content flex flex-col items-center gap-8">
+        <Image src="/Studio_Logo.png" alt="Studio Logo" width={400} height={400} loading="eager" />
+        <span> Studio GrimmTango is an indie games studio with developers based around the globe. </span>
+        <h1>Meet The Team</h1>
+        <div class="flex flex-wrap justify-center gap-[5rem] md:gap-[10rem]">
+            <TeamCard name="Saucy" role="Director/Design Lead" />
+            <TeamCard name="Grimm" role="Co-Director, Creative Lead, 2D Lead" />
+            <TeamCard name="Er3te" role="Producer, 2D Art" />
+            <TeamCard name="Rado" role="Env. Lead" />
+            <TeamCard name="Elizabeth Becker" role="Music Lead" />
+            <TeamCard name="Fresh" role="Programmer" />
+            <TeamCard name="Xekat" role="3D Artist" />
+            <TeamCard name="Leo" role="Programmer" />
+            <TeamCard name="Brandon Trimble" role="Narrative Design" />
+            <TeamCard name="Saph 蓝宝茶叶" role="Writer, VA" />
+            <TeamCard name="Braxtyn Larcade" role="SFX Lead" />
+            <TeamCard name="Lina Tellefsen" role="2D artist / Concept Artist" />
+            <TeamCard name="Nyoom" role="UI Artist" />
+        </div>
+    </div>
+</Layout>

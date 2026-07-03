@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+import "../styles/global.css";
+
+interface Props {
+    name: string;
+    role: string;
+    description?: string;
+    avatar?: string;
+}
+
+const { avatar, name, role, description } = Astro.props;
+const loremIpsuum =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales mi vel tellus consectetur, quis tristique massa ultrices.";
+---
+
+<div
+    class="flex w-[20rem] flex-col items-center gap-4 rounded-xl px-2 py-4 text-center transition-all duration-250 hover:bg-[#c7cfcc]"
+>
+    <Image
+        class="rounded-full bg-[#577277] transition-all duration-250 hover:scale-[1.1]"
+        src={avatar ?? "/Studio_Logo.png"}
+        alt={`${name} avatar`}
+        width={150}
+        height={150}
+    />
+    <h2>{name}</h2>
+    <hr />
+    <span>{role}</span>
+    <span>{description ?? loremIpsuum}</span>
+</div>

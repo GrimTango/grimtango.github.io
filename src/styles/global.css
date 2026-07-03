@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #10141f;
+  opacity: 0.5;
+  width: 100%;
+}
+
+.content {
+  min-height: calc(100vh - 15rem);
+  margin-inline: 15%;
+  flex: 1;
+  margin-block: 5rem;
+}
+
+.nav-link {
+  color: #ebede9;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 500ms;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+  transition-property: opacity;
+  transition-duration: 250ms;
+}
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+  color: #151d28;
+}

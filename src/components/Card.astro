@@ -14,13 +14,13 @@ const { bg, title, content, bgalt } = Astro.props;
 
 <div class="flex flex-col gap-8 md:flex-row">
     <Image
-        class="rounded-xl transition-all duration-250 hover:scale-[1.01] md:w-[66%]"
+        class="rounded-xl object-cover transition-all duration-250 hover:scale-[1.01] md:w-[60%]"
         src={bg}
         alt={bgalt}
         loading="eager"
         decoding="sync"
     />
-    <div class="flex flex-col md:w-[33%]">
+    <div class="flex flex-col md:w-[40%]">
         <h1>{title}</h1>
         {content}
     </div>

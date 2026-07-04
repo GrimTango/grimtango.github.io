@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 100%;
+  background-color: #ebede9;
+  /* height: 100%; */
+}
+
+::selection {
+  background-color: #19332d;
+  color: #ebede9;
+}
+
 h1 {
   font-size: 3rem;
   font-weight: 600;
@@ -39,4 +54,19 @@ hr {
 body {
   font-family: "Roboto Mono", sans-serif;
   color: #151d28;
+}
+
+.animate-page-entry {
+  animation: slideUpFade 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(2rem); /* Slides up from 2rem below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

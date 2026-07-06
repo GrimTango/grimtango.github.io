@@ -14,11 +14,11 @@ const { bg, title, summary, link } = Astro.props;
 ---
 
 <a
-    class={`w-full h-[30rem] md:h-[40rem] relative object-cover overflow-hidden rounded-3xl group flex flex-col justify-center items-center`}
+    class={`select-none w-full h-[30rem] isolate md:h-[40rem] relative object-cover translate-z-0 overflow-hidden rounded-3xl group flex flex-col justify-center items-center`}
     href={link}
 >
     <Image
-        class="absolute z-[-1] h-full w-full object-cover blur-[2px] transition-all duration-500 ease-in-out group-hover:scale-[1.05] group-hover:blur-[8px]"
+        class="absolute h-full w-full scale-[1.05] rounded-3xl object-cover blur-[2px] transition-all duration-500 ease-in-out group-hover:scale-[1.1] group-hover:blur-[8px]"
         src={bg}
         alt={"Game Card"}
         loading="eager"

@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/global.css";
+import Image from "astro/components/Image.astro";
+
+const blogEntries = await getCollection("blog");
+---
+
+<Layout title="Blog">
+    <div class="content flex flex-col gap-4">
+        <h1>Dev Logs</h1>
+        <span>Interested in the development process? Take a look at some of our dev logs! </span>
+        <hr />
+        <div class="flex flex-col gap-4">
+            {
+                blogEntries.map((entry) => (
+                    <div class="w-full rounded-xl bg-[#dbdbdb] p-4 md:w-[50%]">
+                        <a class="flex flex-col gap-2" href={`/blog/${entry.id}`}>
+                            <h2 class="text-[#19332d] underline">{entry.data.title}</h2>
+                            <span>{entry.data.date.toLocaleDateString()}</span>
+                            {entry.data.image && <Image class="rounded-xl" src={entry.data.image} alt="" />}
+                        </a>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</Layout>

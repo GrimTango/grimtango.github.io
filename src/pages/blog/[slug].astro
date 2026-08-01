@@ -1,0 +1,31 @@
+---
+import "../../styles/global.css";
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+import type { InferGetStaticPropsType, GetStaticPaths } from "astro";
+import Image from "astro/components/Image.astro";
+
+export const getStaticPaths = (async () => {
+    const blogEntries = await getCollection("blog");
+
+    return blogEntries.map((entry) => ({
+        params: { slug: entry.id },
+        props: { entry },
+    }));
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<Layout>
+    <div class="content flex flex-col gap-4">
+        <h1>{entry.data.title}</h1>
+        {entry.data.image && <Image src={entry.data.image} alt="" width={500} height={500} />}
+        <span>Published: {entry.data.date.toLocaleDateString()}</span>
+        <hr />
+        <Content />
+    </div>
+</Layout>

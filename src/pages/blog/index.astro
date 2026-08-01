@@ -24,6 +24,7 @@ const blogEntries = await getCollection("blog");
                     </div>
                 ))
             }
+            {!blogEntries.length && <i class="opacity-70">Nothing to see here...</i>}
         </div>
     </div>
 </Layout>

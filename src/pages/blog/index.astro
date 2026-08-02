@@ -14,7 +14,7 @@ const blogEntries = await getCollection("blog");
         <hr />
         <div class="flex flex-col gap-4">
             {
-                blogEntries.map((entry) => (
+                blogEntries.toReversed().map((entry) => (
                     <div class="w-full rounded-xl bg-[#dbdbdb] p-4 md:w-[50%]">
                         <a class="flex flex-col gap-2" href={`/blog/${entry.id}`}>
                             <h2 class="text-[#19332d] underline">{entry.data.title}</h2>

@@ -5,11 +5,10 @@ import "../styles/global.css";
 interface Props {
     name: string;
     role: string;
-    description?: string;
     avatar?: string;
 }
 
-const { avatar, name, role, description } = Astro.props;
+const { avatar, name, role } = Astro.props;
 const loremIpsuum =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales mi vel tellus consectetur, quis tristique massa ultrices.";
 ---
@@ -27,5 +26,7 @@ const loremIpsuum =
     <h2>{name}</h2>
     <hr />
     <span>{role}</span>
-    <span>{description ?? loremIpsuum}</span>
+    <span>
+        {Astro.slots.has("default") ? <slot /> : loremIpsuum}
+    </span>
 </div>

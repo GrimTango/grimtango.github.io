@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 ---
 
 <div
-    class="sticky top-0 z-99 flex h-20 w-full items-center justify-around bg-[#19332d] md:justify-between md:px-[15%]"
+    class="sticky top-0 z-99 flex h-20 w-full items-center justify-around gap-8 bg-[#19332d] pr-4 md:justify-between md:px-[15%]"
     transition:persist
 >
     <a href="/" aria-label="Home">
@@ -19,11 +19,12 @@ import { Image } from "astro:assets";
         />
     </a>
 
-    <div class="flex items-center gap-6">
+    <div class="flex items-center gap-6 md:w-full md:justify-end">
         <a class="nav-link" href="/games" aria-label="Games">Games</a>
         <a class="nav-link" href="/blog" aria-label="About">Blog</a>
         <a class="nav-link" href="/about" aria-label="About">About</a>
-
+    </div>
+    <div class="flex gap-4">
         <a class="nav-link" href="https://x.com/CeloanJ31260" aria-label="Twitter/X" target="_blank">
             <Icon name="simple-icons:x" />
         </a>

@@ -16,8 +16,11 @@ import TeamCard from "../components/TeamCard.astro";
             <TeamCard name="Er3te" role="Producer, 2D Art" avatar="/masks/eran.png" />
 
             {/* Programming */}
-            <TeamCard name="Fresh" role="Programming Lead" avatar="/masks/fresh.png" />
-            <TeamCard name="Leo" role="Programmer" />
+            <TeamCard name="Fresh" role="Programming Lead" avatar="/masks/fresh.png">
+                Game systems and UI programmer. Also a web developer (I made this site!) <br />
+                <a href="https://fresh4.itch.io">Itch</a>
+            </TeamCard>
+
             <TeamCard name="Felix" role="Programmer" avatar="/masks/felix.png" />
 
             {/* Art */}
@@ -25,8 +28,20 @@ import TeamCard from "../components/TeamCard.astro";
             <TeamCard name="Rado" role="Environment Lead" />
             <TeamCard name="Lina Tellefsen" role="Concept Artist, 2D Artist" avatar="/masks/lina.png" />
             <TeamCard name="Xekat" role="3D Artist" avatar="/masks/xekat.png" />
-            <TeamCard name="Amanda" role="3D Artist" avatar="/masks/amanda.png" />
-            <TeamCard name="Jacob H" role="Texture Artist" avatar="/masks/jasco.png" />
+
+            <TeamCard name="Christian Cox" role="3D Artist">
+                <a href="https://x.com/ChristianCoxVO">Twitter/X</a>
+            </TeamCard>
+
+            <TeamCard name="Amanda" role="3D Artist" avatar="/masks/amanda.png">
+                <a href="https://www.artstation.com/amanda_xj">Artstation</a>
+            </TeamCard>
+
+            <TeamCard name="Jacob H" role="Texture Artist" avatar="/masks/jasco.png">
+                <a href="https://lowpolypirateart.carrd.co">Carrd</a> •
+                <a href="https://www.instagram.com/lowpolypirate.art/">Instagram</a>
+            </TeamCard>
+
             <TeamCard name="Nyoom" role="UI Artist" avatar="/masks/nyoom.png" />
 
             {/* Narrative */}
@@ -36,6 +51,16 @@ import TeamCard from "../components/TeamCard.astro";
             {/* Audio */}
             <TeamCard name="Elizabeth Becker" role="Music Lead" avatar="/masks/ella.png" />
             <TeamCard name="Braxtyn Larcade" role="SFX Lead" avatar="/masks/braxtyn.png" />
+
+            <TeamCard name="Wonji" role="Composer/Sound Designer">
+                <a href="https://wonjimusic.com/">Portfolio</a>
+            </TeamCard>
         </div>
     </div>
 </Layout>
+
+<style>
+    a {
+        text-decoration: underline;
+    }
+</style>
